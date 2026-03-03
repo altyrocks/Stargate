@@ -1,9 +1,9 @@
 ﻿using Dapper;
 using MediatR;
+using StargateAPI.Business.Common;
 using StargateAPI.Business.Data;
 using StargateAPI.Business.Dtos;
 using StargateAPI.Business.Services;
-using StargateAPI.Controllers;
 using System.Net;
 
 namespace StargateAPI.Business.Queries

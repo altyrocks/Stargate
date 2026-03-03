@@ -15,7 +15,7 @@
         // Short message: what happened
         public string Message { get; set; } = string.Empty;
 
-        // Optional: stack trace, JSON of payload, etc.
+        // Stack trace, JSON of payload, etc.
         public string? Details { get; set; }
     }
 }

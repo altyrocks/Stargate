@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using StargateAPI.Business.Commands;
 using StargateAPI.Business.Data;
 using StargateAPI.Business.Services;
 
@@ -23,14 +22,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ILogService, LogService>();
-builder.Services.AddDbContext<StargateContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("StargateDb")));
-
-builder.Services.AddMediatR(cfg =>
-{
-    cfg.AddRequestPreProcessor<CreateAstronautDutyPreProcessor>();
-    cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly);
-});
+builder.Services.AddDbContext<StargateContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("StargateDb")));
+builder.Services.AddMediatR(cfg => {cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly);});
+builder.Services.AddScoped<IAstronautDutyDomainService, AstronautDutyDomainService>();
 
 var app = builder.Build();
 

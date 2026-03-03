@@ -1,4 +1,4 @@
-﻿using StargateAPI.Controllers;
+﻿using StargateAPI.Business.Common;
 
 namespace StargateAPI.Business.Dtos
 {

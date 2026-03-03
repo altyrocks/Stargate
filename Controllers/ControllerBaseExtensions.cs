@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using StargateAPI.Business.Common;
 
 namespace StargateAPI.Controllers
 {

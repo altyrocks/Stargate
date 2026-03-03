@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using StargateAPI.Business.Data;
 using StargateAPI.Business.Dtos;
 using StargateAPI.Business.Services;
-using StargateAPI.Controllers;
 using System.Net;
 
 namespace StargateAPI.Business.Queries
@@ -74,8 +73,7 @@ namespace StargateAPI.Business.Queries
                                         SELECT *
                                         FROM [AstronautDuty]
                                         WHERE PersonId = @PersonId
-                                        ORDER BY DutyStartDate DESC
-                                        LIMIT 1;";
+                                        ORDER BY DutyStartDate DESC;";
 
                 var connection = _context.Database.GetDbConnection();
                 if (connection.State != System.Data.ConnectionState.Open)
@@ -137,6 +135,7 @@ namespace StargateAPI.Business.Queries
 
                 return result;
             }
+        
         }
     }
 }

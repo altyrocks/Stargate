@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using StargateAPI.Business.Common;
 using Microsoft.AspNetCore.Mvc;
 using StargateAPI.Business.Commands;
 using StargateAPI.Business.Queries;
