@@ -10,7 +10,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowStargateUI", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.WithOrigins(
+            "http://localhost:4200",
+            "https://purple-dune-0230d5010.2.azurestaticapps.net")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
