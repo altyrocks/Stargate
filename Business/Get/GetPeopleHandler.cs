@@ -1,18 +1,11 @@
 ﻿using Dapper;
 using MediatR;
-using StargateAPI.Business.Common;
 using StargateAPI.Business.Data;
-using StargateAPI.Business.Dtos;
 using StargateAPI.Business.Services;
 using System.Net;
 
 namespace StargateAPI.Business.Queries
 {
-    public class GetPeople : IRequest<GetPeopleResult>
-    {
-
-    }
-
     public class GetPeopleHandler : IRequestHandler<GetPeople, GetPeopleResult>
     {
         private readonly StargateContext _context;
@@ -67,10 +60,5 @@ namespace StargateAPI.Business.Queries
                 return result;
             }
         }
-    }
-
-    public class GetPeopleResult : BaseResponse
-    {
-        public List<Person>? Data { get; set; }
     }
 }
