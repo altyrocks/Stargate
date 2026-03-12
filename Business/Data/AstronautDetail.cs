@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace StargateAPI.Business.Data
 {
@@ -20,5 +20,14 @@ namespace StargateAPI.Business.Data
         public DateTime? CareerEndDate { get; set; }
 
         public virtual Person? Person { get; set; }
+    }
+
+    public class AstronautDetailConfiguration : IEntityTypeConfiguration<AstronautDetail>
+    {
+        public void Configure(EntityTypeBuilder<AstronautDetail> builder)
+        {
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).ValueGeneratedOnAdd();
+        }
     }
 }
