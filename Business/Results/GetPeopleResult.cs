@@ -1,5 +1,5 @@
-﻿using StargateAPI.Business.Common;
-using StargateAPI.Business.Data;
+﻿using StargateAPI.Business.Data;
+using StargateAPI.Business.Common;
 
 namespace StargateAPI.Business.Results
 {

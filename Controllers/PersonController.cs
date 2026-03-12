@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using StargateAPI.Business.Commands;
-using StargateAPI.Business.Queries;
-using StargateAPI.Business.Common;
 using System.Net;
 using StargateAPI.Business.Get;
+using Microsoft.AspNetCore.Mvc;
+using StargateAPI.Business.Common;
+using StargateAPI.Business.Queries;
+using StargateAPI.Business.Commands;
 
 namespace StargateAPI.Controllers
 {

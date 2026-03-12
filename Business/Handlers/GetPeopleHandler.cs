@@ -1,10 +1,10 @@
 ﻿using Dapper;
 using MediatR;
-using StargateAPI.Business.Data;
+using System.Net;
 using StargateAPI.Business.Get;
+using StargateAPI.Business.Data;
 using StargateAPI.Business.Results;
 using StargateAPI.Business.Services;
-using System.Net;
 
 namespace StargateAPI.Business.Handlers
 {
