@@ -4,6 +4,7 @@ using StargateAPI.Business.Commands;
 using StargateAPI.Business.Queries;
 using StargateAPI.Business.Common;
 using System.Net;
+using StargateAPI.Business.Get;
 
 namespace StargateAPI.Controllers
 {

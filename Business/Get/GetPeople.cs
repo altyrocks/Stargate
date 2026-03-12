@@ -1,17 +1,10 @@
 ﻿using MediatR;
-using StargateAPI.Business.Common;
-using StargateAPI.Business.Data;
-using StargateAPI.Business.Dtos;
+using StargateAPI.Business.Results;
 
-namespace StargateAPI.Business.Queries
+namespace StargateAPI.Business.Get
 {
     public class GetPeople : IRequest<GetPeopleResult>
     {
 
-    }
-
-    public class GetPeopleResult : BaseResponse
-    {
-        public List<Person>? Data { get; set; }
     }
 }

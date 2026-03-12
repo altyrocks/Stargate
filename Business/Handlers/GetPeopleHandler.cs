@@ -1,21 +1,17 @@
 ﻿using Dapper;
 using MediatR;
 using StargateAPI.Business.Data;
+using StargateAPI.Business.Get;
+using StargateAPI.Business.Results;
 using StargateAPI.Business.Services;
 using System.Net;
 
-namespace StargateAPI.Business.Queries
+namespace StargateAPI.Business.Handlers
 {
-    public class GetPeopleHandler : IRequestHandler<GetPeople, GetPeopleResult>
+    public class GetPeopleHandler(StargateContext context, ILogService logService) : IRequestHandler<GetPeople, GetPeopleResult>
     {
-        private readonly StargateContext _context;
-        private readonly ILogService _logService;
-
-        public GetPeopleHandler(StargateContext context, ILogService logService)
-        {
-            _context = context;
-            _logService = logService;
-        }
+        private readonly StargateContext _context = context;
+        private readonly ILogService _logService = logService;
 
         public async Task<GetPeopleResult> Handle(
             GetPeople request,
