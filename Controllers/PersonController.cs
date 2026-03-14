@@ -4,7 +4,7 @@ using StargateAPI.Business.Get;
 using Microsoft.AspNetCore.Mvc;
 using StargateAPI.Business.Update;
 using StargateAPI.Business.Common;
-using StargateAPI.Business.Commands;
+using StargateAPI.Business.Create;
 
 namespace StargateAPI.Controllers
 {
